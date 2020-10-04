@@ -10,6 +10,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -19,6 +20,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import axios from 'axios'
+
+const Typ = withStyles({
+  root: {
+    color: "#FF5733"
+  }
+})(Typography);
 
 function Copyright() {
   return (
@@ -70,11 +77,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const steps = ['Personal Info', 'Experience', 'Skills'];
+//const steps = ['Personal Info', 'Experience', 'Skills'];
 
-function getStepContent(step) {
-
-}
+//function getStepContent(step) {}
 
 export default function Checkout() {
 
@@ -95,9 +100,9 @@ export default function Checkout() {
   const [category2, settCategory2] = useState('')
   const [category3, settCategory3] = useState('')
   
-  const sendSignUp = async (e, steps) => {
+  const sendSignUp = async (e) => {
   if (true){
-    const res = await axios.post('http://18.221.248.111:9090/api/userprofile/create', {
+    const res = await axios.post('http://18.221.248.111:9090/api/company/create', {
       firstName: firstName,
       lastName: lastName,
       email: email,
@@ -155,32 +160,16 @@ export default function Checkout() {
       </AppBar>
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography component="h1" variant="h4" align="center">
+          <Typ component="h1" variant="h4" align="center">
             Sign Up
-          </Typography>
-          <Stepper activeStep={activeStep} className={classes.stepper}>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
+          </Typ>
           <React.Fragment>
-            {activeStep === steps.length ? (
               <React.Fragment>
-                <Typography variant="h5" gutterBottom>
-                  Thank you for signing up.
-                </Typography>
-                <Typography variant="subtitle1">
-                  Your profile has been uploaded to our system and will be displayed on the website.
-                </Typography>
+                
               </React.Fragment>
-            ) : (
+              
               <React.Fragment>
                 {<React.Fragment>
-      <Typography variant="h6" gutterBottom>
-        Individual Information
-      </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
