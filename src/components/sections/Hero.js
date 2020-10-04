@@ -70,9 +70,9 @@ const Hero = ({
                 </p>
                 <p></p>
                 <h4>
-                  Companies Supported: <span className="text-color-primary"><CountUp end={100} /></span> &nbsp; &nbsp;
-                  Swaps Made: <span className="text-color-primary"><CountUp end={100} /></span> &nbsp; &nbsp;
-                  Active Postings: <span className="text-color-primary"><CountUp end={100} /></span>  
+                  Companies Supported: <span className="text-color-primary"><CountUp end={8} /></span> &nbsp; &nbsp;
+                  Swaps Made: <span className="text-color-primary"><CountUp end={56} /></span> &nbsp; &nbsp;
+                  Active Postings: <span className="text-color-primary"><CountUp end={23} /></span>  
                 </h4>
                 {/* <div><h3 style={{float:'left'}}>Swaps Made:</h3> <h3 style={{float:'right'}}> <CountUp end={100} /></h3></div> */}
 
