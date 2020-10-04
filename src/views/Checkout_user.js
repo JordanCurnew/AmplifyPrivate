@@ -136,7 +136,7 @@ export default function Checkout() {
     })
 
     console.log(res.data)
-    
+    //routeChange();
   }
 
 }
@@ -605,7 +605,7 @@ export default function Checkout() {
                   <Button
                     variant="contained"
                     color="primary"
-                    onClick={sendSignUp, routeChange}
+                    onClick={sendSignUp}
                     className={classes.button}
                   >
                     Sign Up
