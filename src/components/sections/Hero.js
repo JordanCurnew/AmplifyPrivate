@@ -5,6 +5,7 @@ import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
+import CountUp from 'react-countup';
 
 const propTypes = {
   ...SectionProps.types
@@ -67,8 +68,10 @@ const Hero = ({
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                 Our mission is to allow startups to thrive together through talent sharing!
                 </p>
+                <div><h3 style={{float:'left'}}>Swaps Made:</h3> <h3 style={{float:'right'}}> <CountUp end={100} /></h3></div>
 
-
+                {/* <h3>Companies Supported: </h3><CountUp end={100} /> */}
+                {/* <h3>Active Postings: </h3><CountUp end={100} /> */}
 
 
               {/* <div className="reveal-from-bottom" data-reveal-delay="600">
