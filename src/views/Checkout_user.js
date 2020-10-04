@@ -18,6 +18,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+import {useHistory} from 'react-router-dom'
 
 import axios from 'axios'
 
@@ -82,6 +83,13 @@ const useStyles = makeStyles((theme) => ({
 //function getStepContent(step) {}
 
 export default function Checkout() {
+
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `IndividualDashboard`; 
+    history.push(path);
+  }
 
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -597,7 +605,7 @@ export default function Checkout() {
                   <Button
                     variant="contained"
                     color="primary"
-                    onClick={handleNext}
+                    onClick={sendSignUp, routeChange}
                     className={classes.button}
                   >
                     Sign Up
