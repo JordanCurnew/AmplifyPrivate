@@ -64,11 +64,17 @@ const Hero = ({
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
               Talent<span className="text-color-primary">Swap</span>
             </h1>
-            <div className="container-xs">
+            <div className="container-m">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                 Our mission is to allow startups to thrive together through talent sharing!
                 </p>
-                <div><h3 style={{float:'left'}}>Swaps Made:</h3> <h3 style={{float:'right'}}> <CountUp end={100} /></h3></div>
+                <p></p>
+                <h4>
+                  Companies Supported: <span className="text-color-primary"><CountUp end={100} /></span> &nbsp; &nbsp;
+                  Swaps Made: <span className="text-color-primary"><CountUp end={100} /></span> &nbsp; &nbsp;
+                  Active Postings: <span className="text-color-primary"><CountUp end={100} /></span>  
+                </h4>
+                {/* <div><h3 style={{float:'left'}}>Swaps Made:</h3> <h3 style={{float:'right'}}> <CountUp end={100} /></h3></div> */}
 
                 {/* <h3>Companies Supported: </h3><CountUp end={100} /> */}
                 {/* <h3>Active Postings: </h3><CountUp end={100} /> */}
