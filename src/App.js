@@ -32,6 +32,7 @@ const App = () => {
   useEffect(() => {
     const page = location.pathname;
     document.body.classList.add('is-loaded')
+    document.title = "TalentSwap"
     childRef.current.init();
     trackPage(page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
