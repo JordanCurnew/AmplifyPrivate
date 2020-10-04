@@ -23,7 +23,7 @@ import axios from 'axios'
 
 const Typ = withStyles({
   root: {
-    color: "#FF5733"
+    color: "#000000"
   }
 })(Typography);
 
@@ -102,7 +102,7 @@ export default function Checkout() {
   
   const sendSignUp = async (e) => {
   if (true){
-    const res = await axios.post('http://18.221.248.111:9090/api/company/create', {
+    const res = await axios.post('http://18.221.248.111:9090/api/userprofile/create', {
       firstName: firstName,
       lastName: lastName,
       email: email,
@@ -160,9 +160,6 @@ export default function Checkout() {
       </AppBar>
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typ component="h1" variant="h4" align="center">
-            Sign Up
-          </Typ>
           <React.Fragment>
               <React.Fragment>
                 
@@ -232,9 +229,11 @@ export default function Checkout() {
           />
         </Grid>
       </Grid>
-      <Typography variant="h6" gutterBottom>
+      <br></br>
+      <br></br>
+      <Typ variant="h6" gutterBottom>
         Work Experience
-      </Typography>
+      </Typ>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <TextField required id="companyName" label="Current Company Name" fullWidth autoComplete="companyName" />
@@ -263,9 +262,11 @@ export default function Checkout() {
           />
         </Grid> */}
       </Grid>
-      <Typography variant="h6" gutterBottom>
+      <br></br>
+      <br></br>
+      <Typ variant="h6" gutterBottom>
         Skills
-      </Typography>
+      </Typ>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <TextField
@@ -602,7 +603,6 @@ export default function Checkout() {
                   </Button>
                 </div>
               </React.Fragment>
-            )}
           </React.Fragment>
         </Paper>
         <Copyright />
