@@ -4,9 +4,6 @@ Talent Sharing for Startups: Startups have a small number of employees and may h
 
 ![Website Image](TalentSwap.PNG)
 
-Created by Team 2:
-Jordan Curnew
-Ari Kaufman
-Suvaena Laventhiran
+Created by Team 2: Jordan Curnew, Ari Kaufman, Suvaena Laventhiran
 
 
