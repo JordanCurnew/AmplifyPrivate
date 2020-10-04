@@ -33,7 +33,7 @@ const Footer = ({
       {...props}
       className={classes}
     >
-      <div className="container">
+      {/* <div className="container">
         <div className={
           classNames(
             'site-footer-inner',
@@ -48,7 +48,7 @@ const Footer = ({
             <div className="footer-copyright">Made by <a href="https://cruip.com">Cruip</a>. All right reserved</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

@@ -79,7 +79,7 @@ const Header = ({
       {...props}
       className={classes}
     >
-      <div className="container">
+      {/* <div className="container">
         <div className={
           classNames(
             'site-header-inner',
@@ -127,7 +127,7 @@ const Header = ({
               </nav>
             </>}
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }
