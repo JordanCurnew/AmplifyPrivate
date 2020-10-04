@@ -66,12 +66,12 @@ const Testimonial = ({
                     — You have talent that another company needs! Sign up and get the opportunity to bring your innovative ideas and talents to the aid of another startup.
                       </p>
                   <p></p>
-                  <Button tag="a" color="primary" wideMobile href="/Individual-Sign-Up">
+                  <Button style={{display:'flex', justifyContent:'center'}} tag="a" color="primary" wideMobile href="/Individual-Sign-Up">
                     Individual Sign-up
                     </Button>
                 </div>
-                <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-name text-color-high">Individual</span>
+                <div style={{textAlign:'center'}} className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
+                  <span  className="testimonial-item-name text-color-high">Individual</span>
                   {/* <span className="text-color-low"> / </span> */}
                   <span className="testimonial-item-link">
                     {/* <a href="#0">AppName</a> */}
@@ -87,11 +87,11 @@ const Testimonial = ({
                     — As a startup we know how hard it can be to hire all the talent you need. Sharing talent with other startups allows both to mutually benefit!
                       </p>
                       <p></p>
-                  <Button tag="a" color="primary" wideMobile href="/Company-Sign-Up">
+                  <Button style={{display:'flex', justifyContent:'center'}} tag="a" color="primary" wideMobile href="/Company-Sign-Up">
                     Company Sign-up
                     </Button>
                 </div>
-                <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
+                <div style={{textAlign:'center'}} className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
                   <span className="testimonial-item-name text-color-high">Company</span>
                   {/* <span className="text-color-low"> / </span> */}
                   <span className="testimonial-item-link">
