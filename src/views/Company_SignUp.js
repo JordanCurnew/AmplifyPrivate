@@ -18,6 +18,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+import {useHistory} from 'react-router-dom'
 
 import axios from 'axios'
 
@@ -85,6 +86,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CompanySignUp() {
 
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `CompanyDashboard`; 
+    history.push(path);
+  }
+
   const [companyName, setCompanyName] = useState('')
   const [companySize, setCompanySize] = useState('')
   const [email, setEmail] = useState('')
@@ -116,6 +124,7 @@ export default function CompanySignUp() {
     })
 
     console.log(res.data)
+    routeChange();
   }
 
 }
@@ -248,7 +257,7 @@ export default function CompanySignUp() {
         <Grid container spacing={3}></Grid>
 
         <Grid item xs={3}>
-        <TextField  id="select" label="Category 1" value="20" select value={category1} onChange={(e) => setCategory1(e.target.value)} style={{minWidth: 130}}>
+        <TextField id="select" label="Category 1" value="20" select value={category1} onChange={(e) => setCategory1(e.target.value)} style={{minWidth: 130}}>
           <MenuItem value="1">Education</MenuItem>
           <MenuItem value="2">Accomodation</MenuItem>
           <MenuItem value="3">Food</MenuItem>
@@ -290,7 +299,7 @@ export default function CompanySignUp() {
         <Grid container spacing={3}></Grid>
 
         <Grid item xs={3}>
-        <TextField  id="select" label="Category 3" value="20" select value={category3} onChange={(e) => setCategory3(e.target.value)} style={{minWidth: 130}}>
+        <TextField id="select" label="Category 3" value="20" select value={category3} onChange={(e) => setCategory3(e.target.value)} style={{minWidth: 130}}>
           <MenuItem value="1">Education</MenuItem>
           <MenuItem value="2">Accomodation</MenuItem>
           <MenuItem value="3">Food</MenuItem>
