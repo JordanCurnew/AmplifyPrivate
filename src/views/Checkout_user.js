@@ -10,9 +10,10 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import PersonalForm_user from './PersonalForm_user';
-import ExperienceForm_user from './ExperienceForm_user';
-import SkillsForm_user from './SkillsForm_user';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
 import axios from 'axios'
 
@@ -71,11 +72,135 @@ const steps = ['Personal Info', 'Experience', 'Skills'];
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <PersonalForm_user />;
+      return <React.Fragment>
+      <Typography variant="h6" gutterBottom>
+        Individual Information
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="firstName"
+            name="firstName"
+            label="First Name"
+            fullWidth
+            autoComplete="first-name"
+            //value={firstName}
+            //onChange={(e) => setFirstName(e.target.value)}            
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="lastName"
+            name="lastName"
+            label="Last Name"
+            fullWidth
+            autoComplete="last-name"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            required
+            id="email"
+            name="email"
+            label="Email"
+            fullWidth
+            autoComplete="email"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            required
+            id="password"
+            name="password"
+            label="Password"
+            fullWidth
+            autoComplete="password"
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="city"
+            name="city"
+            label="City"
+            fullWidth
+            autoComplete="city"
+          />
+        </Grid>
+      </Grid>
+    </React.Fragment>;
     case 1:
-      return <ExperienceForm_user />;
+      return  <React.Fragment>
+      <Typography variant="h6" gutterBottom>
+        Work Experience
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6}>
+          <TextField required id="companyName" label="Current Company Name" fullWidth autoComplete="companyName" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            id="role"
+            label="Current Role"
+            fullWidth
+            autoComplete="role"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField required id="companyNamePrev" label="Previous Company Name" fullWidth autoComplete="companyNamePrev" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            required
+            id="rolePrev"
+            label="Previous Role"
+            fullWidth
+            autoComplete="rolePrev"
+          />
+        </Grid>
+      </Grid>
+    </React.Fragment>;
     case 2:
-      return <SkillsForm_user />;
+      return <React.Fragment>
+      <Typography variant="h6" gutterBottom>
+        Skills
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <TextField
+            required
+            id="linkedin"
+            name="linkedin"
+            label="Linkedin"
+            fullWidth
+            autoComplete="linkedin"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            required
+            id="github"
+            name="github"
+            label="Github"
+            fullWidth
+            autoComplete="github"
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="website"
+            name="website"
+            label="Website"
+            fullWidth
+            autoComplete="website"
+          />
+        </Grid>
+      </Grid>
+    </React.Fragment>;
     default:
       throw new Error('Unknown step');
   }
@@ -133,6 +258,7 @@ export default function Checkout() {
 
   return (
     <React.Fragment>
+      
       <CssBaseline />
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
@@ -187,6 +313,9 @@ export default function Checkout() {
         </Paper>
         <Copyright />
       </main>
+      
     </React.Fragment>
+
+    
   );
 }
