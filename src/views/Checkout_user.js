@@ -122,8 +122,8 @@ export default function Checkout() {
       githubUrl: gitHub,
       websiteUrl: website,
       skill1: skill1,
-      skill1: skill2,
-      skill1: skill3,
+      skill2: skill2,
+      skill3: skill3,
       category1: category1,
       category2: category2,
       category3: category3,
@@ -134,7 +134,7 @@ export default function Checkout() {
               'Content-Type': 'application/json'
           }
     })
-
+    routeChange();
     console.log(res.data)
     //routeChange();
   }

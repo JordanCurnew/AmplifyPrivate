@@ -81,6 +81,8 @@ const useStyles = makeStyles((theme) => ({
 
 //function getStepContent(step) {}
 
+
+
 export default function CompanySignUp() {
 
   const [companyName, setCompanyName] = useState('')
@@ -99,14 +101,12 @@ export default function CompanySignUp() {
     const res = await axios.post('http://18.221.248.111:9090/api/company/create', {
       companyName: companyName,
       companySize: companySize,
-      email: email,
-      password: password,
       location: city,
-      websiteUrl: website,
-      description: description,
-      category1: category1,
-      category2: category2,
-      category3: category3,
+      website: website,
+      companyDescription: description,
+      categoryId1: category1,
+      categoryId2: category2,
+      categoryId3: category3,
       },
       {
           headers: {
@@ -219,7 +219,8 @@ export default function CompanySignUp() {
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
-          <TextField required id="description" label="Company Description" fullWidth autoComplete="description" />
+          <TextField required id="description" label="Company Description" fullWidth autoComplete="description" value={description}
+            onChange={(e) => setDescription(e.target.value)}/>
         </Grid>
       </Grid>
       <br></br>
@@ -247,7 +248,7 @@ export default function CompanySignUp() {
         <Grid container spacing={3}></Grid>
 
         <Grid item xs={3}>
-        <TextField id="select" label="Category 1" value="20" select value={category1} onChange={(e) => setCategory1(e.target.value)} style={{minWidth: 130}}>
+        <TextField  id="select" label="Category 1" value="20" select value={category1} onChange={(e) => setCategory1(e.target.value)} style={{minWidth: 130}}>
           <MenuItem value="1">Education</MenuItem>
           <MenuItem value="2">Accomodation</MenuItem>
           <MenuItem value="3">Food</MenuItem>
@@ -289,7 +290,7 @@ export default function CompanySignUp() {
         <Grid container spacing={3}></Grid>
 
         <Grid item xs={3}>
-        <TextField id="select" label="Category 3" value="20" select value={category3} onChange={(e) => setCategory3(e.target.value)} style={{minWidth: 130}}>
+        <TextField  id="select" label="Category 3" value="20" select value={category3} onChange={(e) => setCategory3(e.target.value)} style={{minWidth: 130}}>
           <MenuItem value="1">Education</MenuItem>
           <MenuItem value="2">Accomodation</MenuItem>
           <MenuItem value="3">Food</MenuItem>
